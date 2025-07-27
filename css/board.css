@@ -309,8 +309,161 @@ header {
   }
 }
 
-/* === board Section === */
+/* === Board Section === */
+.board-section {
+  padding: 250px 230px 80px 230px;
+  background-color: #fff;
+}
 
+
+
+.board-header {
+  text-align: left;
+  padding-bottom: 50px;
+}
+
+.board-header h1 {
+  font-size: 34px;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 15px;
+}
+
+.board-header p {
+  font-size: 16px;
+  font-weight: 300;
+  line-height: 1.6;
+  color: rgba(0, 0, 0, 0.8);
+}
+
+.board-members {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Board Member */
+.board-member {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  max-width: 100%;
+  border: 2px solid rgba(0, 0, 0, 0.1);
+  border-radius: 30px;
+  overflow: hidden;
+}
+
+/* Image Styling */
+.member-image-container {
+  flex-shrink: 0;
+  width: 270px;
+  height: 300px;
+  overflow: hidden;
+}
+
+.member-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+
+/* Info Styling */
+.member-info {
+  flex: 1;
+  min-width: 250px;
+  padding: 80px 50px;
+}
+
+.member-info h3 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #000;
+  margin: 0 0 10px;
+}
+
+.member-info p {
+  font-size: 16px;
+  font-weight: 500;
+  color: rgba(242, 183, 5, 1);
+  margin: 0 0 10px;
+}
+
+.member-info span {
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(91, 91, 91, 1);
+}
+
+/* ==== MID SCREENS (TABLETS, MEDIUM LAPTOPS) ==== */
+@media (max-width: 1024px) {
+  .board-section {
+    padding: 150px 80px 60px;
+  }
+
+  .board-member {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .member-image-container {
+    width: 200px;
+    height: 200px;
+  }
+
+  .member-info {
+    padding: 40px 30px;
+  }
+}
+
+/* ==== SMALL SCREENS (MOBILE PHONES) ==== */
+@media (max-width: 600px) {
+  .board-section {
+    padding: 80px 20px 40px;
+  }
+
+  .board-header h1 {
+    font-size: 24px;
+  }
+
+  .board-header p {
+    font-size: 14px;
+  }
+
+  .member-image-container {
+    width: 160px;
+    height: 160px;
+    overflow: hidden;
+  }
+
+  .member-image-container img {
+    object-position: -10px 50px;
+    transform: scale(2);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-radius: 50%;
+  }
+
+  .member-info {
+    padding: 30px 20px;
+  }
+
+  .member-info h3 {
+    font-size: 18px;
+  }
+
+  .member-info p {
+    font-size: 14px;
+  }
+
+  .member-info span {
+    font-size: 13px;
+  }
+}
 
 
 
