@@ -1,16 +1,26 @@
-  document.getElementById("readMoreBtn").addEventListener("click", function (e) {
-    e.preventDefault();
-    const moreText = document.getElementById("more");
-    const dots = document.getElementById("dots");
-    const btn = document.getElementById("readMoreBtn");
+  document.addEventListener("DOMContentLoaded", function () {
+    const paragraph = document.getElementById("paragraph");
+    const toggleBtn = document.getElementById("toggleBtn");
 
-    if (moreText.style.display === "none") {
-      moreText.style.display = "inline";
-      dots.style.display = "none";
-      btn.textContent = "Read less";
-    } else {
-      moreText.style.display = "none";
-      dots.style.display = "inline";
-      btn.textContent = "Read more";
-    }
+    // Hide toggle if content is 4 lines or less
+    const checkLines = () => {
+      const lineHeight = parseFloat(getComputedStyle(paragraph).lineHeight);
+      const lines = Math.round(paragraph.scrollHeight / lineHeight);
+      if (lines <= 4) {
+        toggleBtn.style.display = "none";
+      }
+    };
+
+    checkLines();
+
+    toggleBtn.addEventListener("click", function (e) {
+      e.preventDefault();
+      paragraph.classList.toggle("expanded");
+
+      if (paragraph.classList.contains("expanded")) {
+        toggleBtn.textContent = "read less";
+      } else {
+        toggleBtn.textContent = "...read more";
+      }
+    });
   });

@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Jerusalem fund</title>
-    <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./javascript.js">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../javascript.js">
 </head>
 
 <body>
@@ -43,7 +43,7 @@
 
             <!-- Hamburger toggle button -->
             <button class="nav-toggle" aria-label="Toggle navigation">
-                <span class="hamburger"></span>
+                <span class="hamburger">☰</span>
             </button>
 
             <div class="search-icon">
@@ -58,13 +58,16 @@
         <div class="hero-section">
             <div class="hero-content">
                 <h1>Empowering Communities,<br> Educating the World</h1>
-                <p>
+                <p id="clamp-paragraph" class="read-more-text">
                     The Jerusalem Fund is educating the United States and
                     supporting communities in Palestine.
                     The Jerusalem Fund is educating the United States and
-                    supporting communities in Palestine
-                    <a href="#" class="read-more">...read more</a>
+                    supporting communities in Palestine.
+                    The Jerusalem Fund is educating the United States and
+                    supporting communities in Palestine.
                 </p>
+                <a href="#" id="readMoreToggle" class="read-more-toggle">...read more</a>
+
             </div>
         </div>
         <div class="container-1">
@@ -160,7 +163,7 @@
                         ceasefire bringing limited food insecurity, of which
                         345,000 are experiencing catastrophic levels of
                         hunger.
-                        <a class="read-more">. . read more</a>
+                        <a class="read-more-toggle">. . read more</a>
                     </p>
                     <a href="#" class="donate-btn">Donate now!</a>
                 </div>
@@ -428,6 +431,34 @@
         });
 
     </script>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const paragraph = document.getElementById("clamp-paragraph");
+            const toggleBtn = document.getElementById("readMoreToggle");
+
+            const checkLines = () => {
+                const lineHeight = parseFloat(getComputedStyle(paragraph).lineHeight);
+                const lines = Math.round(paragraph.scrollHeight / lineHeight);
+
+                if (lines <= 3) {
+                    toggleBtn.style.display = "none";
+                }
+            };
+
+            checkLines();
+
+            toggleBtn.addEventListener("click", function (e) {
+                e.preventDefault();
+                paragraph.classList.toggle("expanded");
+
+                toggleBtn.textContent = paragraph.classList.contains("expanded")
+                    ? "read less"
+                    : "...read more";
+            });
+        });
+    </script>
+
 </body>
 
 </html>

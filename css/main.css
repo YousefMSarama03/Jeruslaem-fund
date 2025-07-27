@@ -79,10 +79,15 @@ header {
   background-color: rgba(0, 0, 0, 0.1);
 }
 
+
+
 @media (max-width: 768px) {
   .main-nav {
     padding: 10px 20px;
     position: relative;
+  }
+  .contact-info{
+    display: none;
   }
 
   /* Use flexbox with space-between */
@@ -114,7 +119,6 @@ header {
   }
 
   .nav-links {
-    flex-direction: column;
     gap: 15px;
   }
 
@@ -220,6 +224,78 @@ header {
   background-color: rgba(0, 0, 0, 0.8);
 }
 
+.page-path{
+  color: #fff;
+  font-size: 13px;
+  font-weight: 400;
+  padding: 20px 230px; /* 20px top/bottom, 32px left/right */
+
+  background-image: 
+    linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.85) 70%, rgba(0, 0, 0, 0) 100%),
+    url('../pages/images/nav-meeting.png');
+  background-size:115%;
+  background-position: center 39%;
+  background-repeat: no-repeat;
+}
+
+.hamburger{
+  display: none;
+}
+
+@media (max-width: 1024px) {
+  .main-nav {
+    padding: 10px 20px;
+  }
+
+  .navbar-logo {
+    width: 180px;
+    height: auto;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .nav-links a {
+    font-size: 16px;
+    padding: 10px;
+  }
+
+  .search-icon {
+    display: none; /* Hide search icon on smaller screens */
+  }
+
+  .hamburger{
+    display: block;
+    background: none;
+    font-size: 22px;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    z-index: 1100; /* Ensure it appears above other elements */
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .page-path {
+    padding: 1rem;
+    font-size: 12px;
+  }
+}
+
+
+.page-path span{
+    font-weight: 700;
+
+}
+
+.page-path {
+  filter: brightness(0.9) contrast(0.9);
+}
+
+
 
 
 /*---------- -------------------         */
@@ -275,10 +351,32 @@ header {
 }
 
 
-.read-more {
+
+.read-more-text {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;       /* LIMIT TO 3 LINES */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.read-more-text.expanded {
+  -webkit-line-clamp: unset;
+  overflow: visible;
+}
+
+.read-more-toggle {
+  display: inline-block;
+  margin-top: 6px;
+  font-weight: 500;
   color: #ffe600;
   text-decoration: none;
   cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.read-more-toggle:hover {
+  text-decoration: underline;
 }
 
 
@@ -446,7 +544,6 @@ header {
   .contact-info,
   .main-nav {
     padding: 13px 20px;
-    flex-direction: column;
     gap: 10px;
     text-align: center;
   }
