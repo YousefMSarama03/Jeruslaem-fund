@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="ar">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us</title>
+    <link rel="stylesheet" href="../css/contact-us.css">
+</head>
+
+<body>
+    <header>
+        <div class="contact-info">
+            <div class="phone-info">
+                <img src="./images/phone-icon.svg" alt="phone-icon">
+                <span>+962 6 567 1234</span>
+            </div>
+
+            <div class="social-icons">
+                <img src="./images/facebook.svg" alt="facebook-icon">
+                <img src="./images/instagram.svg" alt="instagram-icon">
+                <img src="./images/twitter.svg" alt="twitter-icon">
+                <img src="./images/tiktok.svg" alt="tiktok-icon">
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <img src="./images/navbar-logo.svg" alt="navbar-logo" class="navbar-logo">
+
+            <div class="nav-links-container">
+                <ul class="nav-links">
+                    <li><a href="#">Who we are</a></li>
+                    <li><a href="#">What we do</a></li>
+                    <li><a href="#">Events</a></li>
+                    <li><a href="#">Grants</a></li>
+                    <li><a href="#">Blogs</a></li>
+                    <li><a href="#">Resource Library</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+
+
+            <button class="nav-toggle" aria-label="Toggle navigation">
+                <span class="hamburger">☰</span>
+            </button>
+            <div class="search-icon">
+                <img src="./images/search-icon.svg" alt="Search Icon"
+                    style="width: 100%; height: 100%; object-fit: contain;">
+            </div>
+
+        </nav>
+    </header>
+
+    <section>
+        <div class="contact-section">
+            <div class="contact-about">
+                <div class="left-section">
+                    <div class="contact-details">
+                        <span class="contact-title">Contact Us..</span>
+                        <h3 class="contact-aim">Your Voice, Our Mission</h3>
+                        <p class="contact-explain">The Jerusalem Fund is a non-profit organization devoted to supporting
+                            education, development,
+                            and
+                            humanitarian programs in Palestine and the broader Middle East.</p>
+                    </div>
+
+                    <div class="contact-numbers">
+                        <ul>
+                            <li>
+                                <div class="square"></div><span>+972-2-627-0020</span>
+                            </li>
+                            <li>
+                                <div class="square"></div><span>+972-2-627-0010</span>
+                            </li>
+                            <li>
+                                <div class="square"></div><span>info@jerusalemfund.org</span>
+                            </li>
+                            <li>
+                                <div class="square"></div><span>1234 Al-Quds Street, Jerusalem, Palestine</span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="right-section">
+                    <form action="#" method="post" class="contact-form">
+                        <div class="form-group">
+                            <!-- Full Name -->
+                            <input type="text" id="name" name="name" placeholder="Full Name" required>
+
+                            <!-- Country Code + Phone Number -->
+                            <div class="phone-wrapper">
+                                <select id="country-code" name="country-code" required>
+                                    <option value="+1">🇺🇸 United States (+1)</option>
+                                    <option value="+44">🇬🇧 United Kingdom (+44)</option>
+                                    <option value="+86">🇨🇳 China (+86)</option>
+                                    <option value="+91">🇮🇳 India (+91)</option>
+
+                                    <!-- Arab Countries -->
+                                    <option value="+970" selected>🇵🇸 Palestine (+970)</option>
+                                    <option value="+20">🇪🇬 Egypt (+20)</option>
+                                    <option value="+966">🇸🇦 Saudi Arabia (+966)</option>
+                                    <option value="+971">🇦🇪 UAE (+971)</option>
+                                    <option value="+962">🇯🇴 Jordan (+962)</option>
+                                    <option value="+963">🇸🇾 Syria (+963)</option>
+                                    <option value="+961">🇱🇧 Lebanon (+961)</option>
+                                    <option value="+964">🇮🇶 Iraq (+964)</option>
+                                    <option value="+965">🇰🇼 Kuwait (+965)</option>
+                                    <option value="+968">🇴🇲 Oman (+968)</option>
+                                    <option value="+974">🇶🇦 Qatar (+974)</option>
+                                    <option value="+212">🇲🇦 Morocco (+212)</option>
+                                    <option value="+213">🇩🇿 Algeria (+213)</option>
+                                    <option value="+216">🇹🇳 Tunisia (+216)</option>
+                                    <option value="+218">🇱🇾 Libya (+218)</option>
+                                    <option value="+967">🇾🇪 Yemen (+967)</option>
+                                    <option value="+249">🇸🇩 Sudan (+249)</option>
+
+                                    <!-- Others -->
+                                    <option value="+33">🇫🇷 France (+33)</option>
+                                    <option value="+49">🇩🇪 Germany (+49)</option>
+                                    <option value="+81">🇯🇵 Japan (+81)</option>
+                                    <option value="+82">🇰🇷 South Korea (+82)</option>
+                                </select>
+
+                                <input type="text" name="phone-number" id="phone-number" placeholder="Phone Number"
+                                    required>
+                            </div>
+
+                            <!-- Message -->
+                            <textarea name="message" id="message" placeholder="Message / Inquiry" rows="10"
+                                required></textarea>
+
+                            <!-- Info + Submit -->
+                            <div class="form-bottom">
+                                <p class="form-note">
+                                    Please fill out the form below and one of our team members will get back to
+                                    you—usually within two business days.
+                                </p>
+                                <button type="submit" class="send-button">Send</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+
+            <div class="contact-location">
+                <div class="location-header">
+                    <div class="location-icon">
+                        <img src="../pages/images/location-img.png" alt="location-img">
+                    </div>
+                    <div class="location-text">
+                        <h2>Location & Parking</h2>
+                        <p>The offices of The Jerusalem Fund and its educational program, the Palestine Center, are
+                            located on the ground level of the Potomac Plaza Building.</p>
+                    </div>
+                </div>
+                <div class="location-header">
+                    <div class="location-icon">
+                        <img src="../pages/images/parking-img.png" alt="location-img">
+                    </div>
+                    <div class="location-text">
+                        <h2>Limited parking is available on the street.</h2>
+                        <p>There is no parking available at the Potomac Plaza building. Only six spaces are available in
+                            front of The Jerusalem Fund offices</p>
+                    </div>
+                </div>
+
+            </div>
+
+    </section>
+
+
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="./images/navbar-logo.svg" alt="The Jerusalem Fund Logo">
+                <p>
+                    Through educational events, humanitarian support, and cultural preservation, the Jerusalem Fund is
+                    helping build the movement for Palestinian liberation.
+                </p>
+            </div>
+
+            <div class="footer-links">
+                <div class="footer-section">
+                    <h3>WHO WE ARE</h3>
+                    <ul>
+                        <li><a href="#">Our History</a></li>
+                        <li><a href="#">Board of Directors</a></li>
+                        <li><a href="#">Contact</a></li>
+                        <li><a href="#">Employment</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>WHAT WE DO</h3>
+                    <ul>
+                        <li><a href="#">Palestine Center</a></li>
+                        <li><a href="#">Humanitarian Link</a></li>
+                        <li><a href="#">Gallery Al-Quds</a></li>
+                        <li><a href="#">Grants</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>CONNECT</h3>
+                    <ul>
+                        <li><a href="#">The Jerusalem Fund 2425</a></li>
+                        <li><a href="#">Virginia Ave NW</a></li>
+                        <li><a href="#">Newsletter</a></li>
+                        <li><a href="#">Washington, DC 20037</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-social">
+                <div class="footer-copyright">
+                    <p>&copy; 2025 The Jerusalem Fund. All rights reserved.</p>
+                </div>
+                <div class="footer-social-icons">
+                    <img src="./images/facebook.svg" alt="facebook-icon">
+                    <img src="./images/instagram.svg" alt="instagram-icon">
+                    <img src="./images/twitter.svg" alt="twitter-icon">
+                    <img src="./images/tiktok.svg" alt="tiktok-icon">
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
