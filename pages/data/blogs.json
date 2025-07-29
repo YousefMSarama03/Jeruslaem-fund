@@ -1,0 +1,21 @@
+[
+  {
+    "img": "./images/resilience.png",
+    "category": "Resilience",
+    "title": "Community Spotlight: A Story of Resilience",
+    "date": "12 June, 2025"
+  },
+  {
+    "img": "./images/education-photo.png",
+    "category": "Education",
+    "title": "Empowering the Next Generation through Education",
+    "date": "18 July, 2025"
+  },
+  {
+    "img": "./images/hope.png",
+    "category": "Hope",
+    "title": "Bringing Hope to Communities in Need",
+    "date": "24 July, 2025"
+  }
+]
+    

@@ -49,6 +49,10 @@
             </div>
 
         </nav>
+
+        <div class="page-path">
+            <h2>The Jerusalem Fund - <span>What We Do</span></h2>
+        </div>
     </header>
 
 
@@ -170,6 +174,15 @@
             </div>
         </div>
     </footer>
+
+    <script>
+        const toggleBtn = document.querySelector(".nav-toggle");
+        const navLinksContainer = document.querySelector(".nav-links-container");
+
+        toggleBtn.addEventListener("click", () => {
+            navLinksContainer.classList.toggle("active");
+        });
+    </script>
 </body>
 
 </html>

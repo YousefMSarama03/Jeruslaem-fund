@@ -322,7 +322,7 @@ header {
   right: 0;
   bottom: 0;
   background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
-    url('../images/jerusalem-pic.png');
+    url('../pages/images/jerusalem-pic.png');
   background-position: 16% center;
   background-size: 200%;
   background-repeat: no-repeat;
@@ -645,19 +645,51 @@ header {
 }
 
 .blog-main-card {
-  background-image: url('../images/education-photo.png');
+  background-image: 
+    linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(0, 0, 0, 1)),
+    url("../pages/images/education-photo.png");
   background-size: cover;
-  /* To make sure the image covers the whole div */
   background-position: center;
-  /* To center the image */
   background-repeat: no-repeat;
   width: 100%;
-  /* Adjust width as needed */
   height: 400px;
-  /* Set your preferred height */
   border-radius: 30px;
-  /* Optional: rounded corners */
 }
+
+.main-blog-info {
+  color: #000;
+  z-index: 1;
+  position: relative;
+  top: 63%;
+  left: 2%;
+}
+
+.main-blog-info h1 {
+  font-size: 16px;
+  font-weight: 600;
+  background-color: rgba(242, 183, 5, 1);
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 29px;
+  display: inline-block;
+  margin-bottom: 10px;
+
+}
+
+.main-blog-info span {
+  font-size: 30px;
+  display: block;
+  font-weight: 600;
+  color: #fff;
+}
+
+.main-blog-info p {
+  font-size: 16px;
+  font-weight: 500;
+    color: #fff;
+
+}
+
 
 .all-cards {
   display: flex;
@@ -675,7 +707,7 @@ header {
 }
 
 .blog-img {
-  width: 270px;
+  width: 244px;
   height: 150px;
   display: block;
   border-radius: 20px;
@@ -699,7 +731,7 @@ header {
 
 .blog-info {
   text-align: left;
-  width: 270px;
+  width: 244px;
 }
 
 .blog-category {
@@ -732,6 +764,7 @@ header {
   border-radius: 20px;
   margin-top: 40px;
 }
+
 
 /* === Events Section === */
 
@@ -1011,4 +1044,71 @@ footer {
 .footer-social-icons img:hover {
   transform: scale(1.05);
 
+}
+
+@media (max-width: 1024px) {
+  footer {
+    padding: 60px 80px;
+  }
+
+  .footer-social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+}
+
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 40px;
+  }
+
+  .footer-container {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 40px;
+  }
+
+  .footer-links {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-social {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .footer-social-icons {
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 40px 20px;
+  }
+
+  .footer-logo img {
+    max-width: 150px;
+  }
+
+  .footer-section h3 {
+    font-size: 16px;
+  }
+
+  .footer-section a {
+    font-size: 13px;
+  }
+
+  .footer-logo p,
+  .footer-copyright p {
+    font-size: 13px;
+  }
+
+  .footer-social-icons img {
+    width: 26px;
+    height: 26px;
+  }
 }

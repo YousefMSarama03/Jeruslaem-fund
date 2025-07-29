@@ -11,6 +11,7 @@
 
 <body>
 
+
     <header>
         <div class="contact-info">
             <div class="phone-info">
@@ -182,45 +183,64 @@
                 </div>
                 <div class="blog-cards">
                     <div class="blog-main-card">
+                        <div class="blog-main-card" id="mainCard">
+                            <div class="main-blog-info" id="mainInfo">
+                                <h1>Category</h1>
+                                <span>Blog Title</span>
+                                <p>Date</p>
+                            </div>
+                        </div>
 
                     </div>
                     <div class="all-cards">
-                        <div class="blog-card">
-                            <span class="mark">Resilience</span>
-                            <img src="./images/resilience.png" alt="blog-img-1" class="blog-img">
+                        <div class="blog-card" data-img="./images/resilience.png" data-category="Resilience"
+                            data-title="Community Spotlight: A Story of Resilience" data-date="12 June, 2025">
+                            <div>
+                                <span class="mark">Resilience</span>
+                                <img src="./images/resilience.png" alt="blog-img" class="blog-img">
+                            </div>
                             <div class="blog-info">
-                                <h1 class="blog-title">Community Spotlight: A
-                                    Story of Resilience June 12 , 2025</h1>
+                                <h1 class="blog-title">Community Spotlight: A Story of Resilience</h1>
                                 <span class="blog-date">12 June, 2025</span>
                             </div>
                         </div>
-                        <div class="blog-card">
-                            <span class="mark">Humanitarian</span>
-                            <img src="./images/Humanitarian.png" alt="blog-img-1" class="blog-img">
+
+                        <div class="blog-card" data-img="./images/Humanitarian.png" data-category="Humanitarian"
+                            data-title="New Partnership Expands Humanitarian June 12 , 2025" data-date="12 June, 2025">
+                            <div>
+                                <span class="mark">Resilience</span>
+                                <img src="./images/Humanitarian.png" alt="blog-img" class="blog-img">
+                            </div>
                             <div class="blog-info">
-                                <h1 class="blog-title">New Partnership Expands
-                                    Humanitarian </h1>
+                                <h1 class="blog-title">Community Spotlight: A Story of Resilience</h1>
                                 <span class="blog-date">12 June, 2025</span>
                             </div>
                         </div>
-                        <div class="blog-card">
-                            <span class="mark">Actions</span>
-                            <img src="./images/education-photo.png" alt="blog-img-1" class="blog-img">
+
+                        <div class="blog-card" data-img="./images/resilience.png" data-category="Resilience"
+                            data-title="Community Spotlight: A Story of Resilience" data-date="12 June, 2025">
+                            <div>
+                                <span class="mark">Resilience</span>
+                                <img src="./images/resilience.png" alt="blog-img" class="blog-img">
+                            </div>
                             <div class="blog-info">
-                                <h1 class="blog-title">How You Can Help: Take
-                                    Action Today </h1>
+                                <h1 class="blog-title">Community Spotlight: A Story of Resilience</h1>
                                 <span class="blog-date">12 June, 2025</span>
                             </div>
                         </div>
-                        <div class="blog-card">
-                            <span class="mark">Education</span>
-                            <img src="./images/education-photo.png" alt="blog-img-1" class="blog-img">
+
+                        <div class="blog-card" data-img="./images/resilience.png" data-category="Resilience"
+                            data-title="Community Spotlight: A Story of Resilience" data-date="12 June, 2025">
+                            <div>
+                                <span class="mark">Resilience</span>
+                                <img src="./images/resilience.png" alt="blog-img" class="blog-img">
+                            </div>
                             <div class="blog-info">
-                                <h1 class="blog-title">Education: The Key to a
-                                    Brighter Future</h1>
+                                <h1 class="blog-title">Community Spotlight: A Story of Resilience</h1>
                                 <span class="blog-date">12 June, 2025</span>
                             </div>
                         </div>
+
                     </div>
                 </div>
             </div>
@@ -455,6 +475,35 @@
                 toggleBtn.textContent = paragraph.classList.contains("expanded")
                     ? "read less"
                     : "...read more";
+            });
+        });
+    </script>
+
+    <script>
+        const mainCard = document.getElementById('mainCard');
+        const mainInfo = document.getElementById('mainInfo');
+        const blogCards = document.querySelectorAll('.blog-card');
+
+        blogCards.forEach(card => {
+            card.addEventListener('click', () => {
+                const img = card.getAttribute('data-img');
+                const category = card.getAttribute('data-category');
+                const title = card.getAttribute('data-title');
+                const date = card.getAttribute('data-date');
+
+                mainCard.style.backgroundImage = `
+        linear-gradient(to bottom, rgba(242, 183, 5, 0.6), rgba(255, 251, 230, 0.9)),
+        url('${img}')
+      `;
+
+                mainInfo.innerHTML = `
+        <h1>${category}</h1>
+        <span>${title}</span>
+        <p>${date}</p>
+      `;
+
+                // Optional: Scroll to main card on mobile
+                mainCard.scrollIntoView({ behavior: "smooth", block: "start" });
             });
         });
     </script>
